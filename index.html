@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fun Checker</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			cursor:url('cursor3.svg') , auto;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+			background: #a29bfe;
+
+		}
+		h1{
+			position: absolute;
+			top:6%;
+			font-family: sans-serif;
+			font-size: 45px;
+			color: #fff;
+			text-shadow: 0 5px #6c5ce7 , 0 5px #6c5ce7 ,0 5px #6c5ce7 ,0 5px #6c5ce7 ;
+		}
+		input{
+			height: 40px;
+			width: 250px;
+			border: 5px solid #6c5ce7;
+			outline: none;
+			border-radius: 10px;
+			padding: 10px;
+			color: #6c5ce7;
+			box-shadow: 0 0 10px 0  #6c5ce7 , 0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ;			
+			font-weight: bold;
+			margin-top: 30px;
+		}
+		button{
+			height: 40px;
+			width: 80px;
+			outline: none;
+			color: #fff;
+			font-family: sans-serif;
+			font-size: 20px;
+			margin-top: 20px;
+			border-radius: 30px;
+			cursor: pointer;
+			box-shadow: 0 0 10px 0  #6c5ce7 , 0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ;
+			border: none;
+			background: #6c5ce7;
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		Fun Checker
+	</h1>
+	<input type="text" id="name" placeholder="Enter Your Name">
+	<button id="btn">Check</button>
+	<img id="fun" style="height: 300px; width: 300px; border: 8px double #6c5ce7; margin-top: 20px; box-shadow: 0 0 10px 0  #6c5ce7 , 0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ,0 0 10px 0  #6c5ce7 ;">
+<!-- https://joeschmoe.io/api/v1/random -->
+
+<script>
+	var btn = document.getElementById('btn');
+	btn.addEventListener("click" , function(event) {
+		var name = document.getElementById('name').value;
+		var fun = document.getElementById('fun');
+		fun.src=`https://joeschmoe.io/api/v1/`+ name ;
+	});
+</script>
+</body>
+</html>
